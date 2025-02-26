@@ -1,7 +1,7 @@
 ﻿
-namespace RiftCouncilAppLibrary.DataAccess
+namespace RiftCouncilAppLibrary.DataAccess;
+
+public class DbConnection
 {
-    public class DbConnection
-    {
-    }
 }
+
