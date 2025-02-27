@@ -4,7 +4,7 @@ using MongoDB.Driver;
 
 namespace RiftCouncilAppLibrary.DataAccess;
 
-public class DbConnection
+public class DbConnection : IDbConnection
 {
     private readonly IConfiguration _config;
     private readonly IMongoDatabase _db;
@@ -18,7 +18,7 @@ public class DbConnection
 
     public IMongoCollection<CategoryModel> CategoryCollection { get; private set; }
     public IMongoCollection<StatusModel> StatusCollection { get; private set; }
-    public IMongoCollection<UserModel> UserCollections { get; private set; }
+    public IMongoCollection<UserModel> UserCollection { get; private set; }
     public IMongoCollection<SuggestionModel> SuggestionCollection { get; private set; }
 
     public DbConnection(IConfiguration config)
@@ -30,7 +30,7 @@ public class DbConnection
 
         CategoryCollection = _db.GetCollection<CategoryModel>(CategoryCollectionName);
         StatusCollection = _db.GetCollection<StatusModel>(StatusCollectionName);
-        UserCollections = _db.GetCollection<UserModel>(UserCollectionName);
+        UserCollection = _db.GetCollection<UserModel>(UserCollectionName);
         SuggestionCollection = _db.GetCollection<SuggestionModel>(SuggestionCollectionName);
     }
 }
