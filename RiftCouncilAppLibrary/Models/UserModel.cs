@@ -15,6 +15,6 @@
         public string EmailAddress { get; set; }
 
         public List<BasicSuggestionModel> AuthoredSuggestions { get; set; } = new();
-        public List<SuggestionModel> VotedonSuggestions { get; set; } = new();
+        public List<BasicSuggestionModel> VotedonSuggestions { get; set; } = new();
     }
 }
