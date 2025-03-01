@@ -36,11 +36,11 @@
 						<span class="oi oi-caret-top"></span>
 						<div>@GetUpVoteBottomText(s)</div>
 					</div>
-					<div onclick="(() => OpenDetails(s))">
+					<div @onclick="(() => OpenDetails(s))">
 						@s.Suggestion
 					</div>
 					<div>
-						<div onclick="(() => OpenDetails(s))">
+						<div @onclick="(() => OpenDetails(s))">
 							@s.Category?.CategoryName
 						</div>
 					</div>
