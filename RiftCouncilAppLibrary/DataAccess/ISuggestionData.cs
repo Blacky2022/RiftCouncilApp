@@ -8,6 +8,7 @@ namespace RiftCouncilAppLibrary.DataAccess
         Task<List<SuggestionModel>> GetAllSuggestions();
         Task<List<SuggestionModel>> GetAllSuggestionsWaitingForApproval();
         Task<SuggestionModel> GetSuggestion(string id);
+        Task<List<SuggestionModel>> GetUserSuggestions(string userId);
         Task UpdateSuggestion(SuggestionModel suggestion);
         Task UpVoteSuggestion(string suggestionId, string userId);
     }
