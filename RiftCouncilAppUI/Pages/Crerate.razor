@@ -1,6 +1,8 @@
 ﻿@page "/Create"
+@attribute [Authorize]
 @using RiftCouncilAppUI.Components
 @using RiftCouncilAppUI.Models
+@inject AuthenticationStateProvider authProvider
 @inject ICategoryData categoryData
 @inject ISuggestionData suggestionData
 @inject IUserData userData
@@ -59,10 +61,9 @@
 	protected async override Task OnInitializedAsync()
 	{
 		categories = await categoryData.GetAllCategories();
-
-		//TODO - Replace with actual user
-		loggedInUser = await userData.GetUserFromAuthentication("abc-123");
-
+		var authState = await authProvider.GetAuthenticationStateAsync();
+		string objectId = authState.User.Claims.FirstOrDefault(c => c.Type.Contains("objectindentifier"))?.Value;
+		loggedInUser = await userData.GetUserFromAuthentication(objectId);
 	}
 
 
