@@ -361,3 +361,59 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Pliki konfiguracyjne z danymi wra¿liwymi
+appsettings.Production.json
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+
+# Visual Studio - pliki binarne i tymczasowe
+bin/
+obj/
+.vscode/
+.vs/
+
+# Pliki u¿ytkownika
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.swp
+
+# Pliki builda i cache
+*.pdb
+*.log
+*.tlog
+*.cache
+*.ilk
+*.tmp
+*.csproj.user
+*.db
+
+# Pliki zale¿noœci .NET Core
+project.lock.json
+global.json
+
+# Pliki generowane przez NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+
+# Migracje EF Core (jeœli nie chcesz œledziæ zmian w bazie)
+Migrations/
+
+# Pliki tymczasowe
+Thumbs.db
+.DS_Store
+
+# Pliki konfiguracyjne
+*.json
+appsettings*.json
+launchSettings.json
+/RiftCouncilAppUI/Properties/Resources.resx
+/RiftCouncilAppUI/Properties/launchSettings.json
+/RiftCouncilAppLibrary/.editorconfig
+/RiftCouncilAppUI/appsettings.json
+/RiftCouncilAppLibrary/RiftCouncilAppLibrary.csproj
