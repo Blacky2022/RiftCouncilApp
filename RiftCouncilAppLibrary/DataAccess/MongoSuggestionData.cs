@@ -90,7 +90,7 @@ namespace RiftCouncilAppLibrary.DataAccess
                 await suggestionsInTransaction.ReplaceOneAsync(s => s.Id == suggestionId, suggestion);
 
                 var usersInTransaction = db.GetCollection<UserModel>(this.db.UserCollectionName);
-                var user = await this.userData.GetUser(suggestion.Author.Id);
+                var user = await this.userData.GetUser(userId);
 
                 if (isUpvote)
                 {
@@ -99,7 +99,7 @@ namespace RiftCouncilAppLibrary.DataAccess
                 else
                 {
                     var suggestionToRemove = user.VotedonSuggestions.Where(s => s.Id == suggestionId).First();
-                    user.VotedonSuggestions.Remove(new BasicSuggestionModel(suggestion));
+                    user.VotedonSuggestions.Remove(suggestionToRemove);
                 }
                 await usersInTransaction.ReplaceOneAsync(u => u.Id == user.Id, user);
 
