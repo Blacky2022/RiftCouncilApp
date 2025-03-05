@@ -77,33 +77,27 @@ else
 		}
 		StatusModel stat= new()
 			{
-				StatusName = "Open",
-				StatusDescription = "Open for discussion"
+				StatusName = "Completed",
+				StatusDescription = "Suggestion completed"
 			};
 		await statusData.CreateStatus(stat);
 		stat = new()
 			{
-				StatusName = "Closed",
-				StatusDescription = "Discussion is closed"
+				StatusName = "Watching",
+				StatusDescription = "Suggestion is being watched"
 			};
 		await statusData.CreateStatus(stat);
 		stat = new()
 			{
-				StatusName = "In Progress",
-				StatusDescription = "Discussion is in progress"
-			};
-		await statusData.CreateStatus(stat);
-		stat = new()
-			{
-				StatusName = "Resolved",
-				StatusDescription = "Discussion is resolved"
+				StatusName = "Upcoming",
+				StatusDescription = "Suggestion is incoming in next patches"
 			};
 		await statusData.CreateStatus(stat);
 
 		stat = new()
 			{
-				StatusName = "Dissmissed",
-				StatusDescription = "Discussion is dissmissed"
+				StatusName = "Dismissed",
+				StatusDescription = "Suggestion is dismissed"
 			};
 		await statusData.CreateStatus(stat);
 		
