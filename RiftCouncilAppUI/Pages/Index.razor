@@ -11,9 +11,8 @@
 <div class="suggestion-container">
 	<button @onclick="LoadCreatePage" class="suggest-btn btn btn-outline-light btn-lg text-uppercase">Suggest</button>
 </div>
-
 <div class="row">
-	<div class="sugggestions-count col-md-4 text-light mt-2">@suggestions?.Count Suggestions</div>
+	<div class="suggestions-count col-md-4 mt-2 fw-bolder"><span class="suggestion-count-span">@suggestions?.Count Suggestions </span></div>
 	<div class="col-md-4 col-xl-5 btn-group">
 		<buttonc class="btn btn-order @SortedByNewClass(true)" @onclick="(() => OrderByNew(true))">New</buttonc>
 		<button  class="btn btn-order @SortedByNewClass(false)" @onclick="(() => OrderByNew(false))">Popular</button>

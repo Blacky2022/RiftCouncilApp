@@ -95,6 +95,7 @@ a, .btn-link {
 
 .page-heading {
     text-align: center;
+
 }
 .suggestion-container {
     display: flex;
@@ -117,10 +118,19 @@ a, .btn-link {
     border-color: #FFFFFF;
 }
 
-.sugggestions-count {
+.suggestions-count {
     font-family: 'Quicksand', sans - serif;
-    font-weight:700;
+    font-weight: 800;
+    text-align:left;
     font-size: 1rem;
+    color: #000000;
+}
+
+.suggestion-count-span {
+    background-color: #FFFFFF;
+    padding: 3px;
+    border-radius: 15px;
+
 }
 
 .btn-order {
@@ -500,3 +510,75 @@ a:hover, .btn-link:hover {
 .suggestion-detail-owner-notes{
     padding-bottom: 20px;
 }
+
+.submission {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn-approve,
+.btn-reject {
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 10px;
+    border-width: 3px;
+}
+
+.btn-approve{
+    color: #FFFFFF;
+    background-color: #B5D43A;
+    border-color: #FFFFFF;
+}
+
+    .btn-approve:hover {
+        border-color: #B5D43A;
+        background-color: #FFFFFF;
+        color: #B5D43A;
+    }
+
+.btn-reject {
+    color: #FFFFFF;
+    background-color: #E9354C;
+    border-color: #FFFFFF;
+}
+
+    .btn-reject:hover {
+        border-color: #E9354C;
+        background-color: #FFFFFF;
+        color: #E9354C;
+    }
+
+.approval-edit-form {
+    display: flex;
+}
+
+.approval-edit-field {
+    flex: 1;
+    border-radius:10px;
+}
+
+.submission-edit-approve {
+    color: #B5D43A;
+}
+    .submission-edit-approve:hover {
+        font-weight: 700;
+    }
+
+.submission-edit-reject {
+    color: #E9354C;
+}
+
+    .submission-edit-reject:hover {
+        font-weight: 700;
+    }
+
+.submission-edit-icon {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+    .submission-edit-icon:hover {
+        color: #39BAD8;
+    }
