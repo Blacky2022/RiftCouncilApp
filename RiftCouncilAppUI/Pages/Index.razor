@@ -34,7 +34,7 @@
 				<div class="suggestion-entry">
 					<div class="@GetVoteClass(s)" @onclick="(() => VoteUp(s))">
 						<div class="text-uppercase">@GetUpVoteTopText(s)</div>
-						<span class="oi oi-caret-top" style="font-size: 3rem;"></span>
+						<span class="oi oi-caret-top entry-upvote"></span>
 						<div class="text-uppercase">@GetUpVoteBottomText(s)</div>
 					</div>
 					<div class="suggestion-entry-text">
@@ -384,6 +384,7 @@
 
 		}
 	}
+
 	private string GetSelectedStatus(string status = "All")
 	{
 		if (status == selectedStatus)
