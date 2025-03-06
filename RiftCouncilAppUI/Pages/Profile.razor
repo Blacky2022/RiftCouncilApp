@@ -9,7 +9,7 @@
 
 <div class="row">
 	<div class="col-12 close-button-section">
-		<button onclick="ClosePage"></button>
+		<button class="btn btn-close" @onclick="ClosePage"></button>
 	</div>
 </div>
 
@@ -33,16 +33,16 @@
 			<div class="fw-bold suggestion-detail-suggestion">
 				@s.Suggestion
 			</div>
-			<p class=":my-submission-text">
+			<p class="my-submission-text">
 				@s.DateCreated.ToString("MM.dd.yyyy");
 			</p>
-			<p class=":my-submission-text">
+			<p class="my-submission-text">
 				Total Votes: @s.UserVotes.Count
 			</p>
-			<p class=":my-submission-text">
+			<p class="my-submission-text">
 				@s.Category.CategoryName
 			</p>
-			<p class=":my-submission-text">
+			<p class="my-submission-text">
 				@s.Description
 			</p>
 			@if (s.SuggestionStatus is not null)
@@ -50,7 +50,7 @@
 				<div class="fw-bold suggestion-detail-suggestion">
 					@s.SuggestionStatus.StatusName
 				</div>
-				<p class=":my-submission-text">
+				<p class="my-submission-text">
 					@((MarkupString)s.OwnerNotes)
 				</p>
 
@@ -64,22 +64,22 @@
 	<div class="form-layout mb-3">
 		<h2 class="my-submission-heading">Archived Suggestions</h2>
 		<p class="my-submission-text">These are your suggestions that have been archived.</p>
-		@foreach (var s in approved)
+		@foreach (var s in archived)
 		{
 			<hr class="my-submission-separator" />
 			<div class="fw-bold suggestion-detail-suggestion">
 				@s.Suggestion
 			</div>
-			<p class=":my-submission-text">
+			<p class="my-submission-text">
 				@s.DateCreated.ToString("MM.dd.yyyy");
 			</p>
-			<p class=":my-submission-text">
+			<p class="my-submission-text">
 				Total Votes: @s.UserVotes.Count
 			</p>
-			<p class=":my-submission-text">
+			<p class="my-submission-text">
 				@s.Category.CategoryName
 			</p>
-			<p class=":my-submission-text">
+			<p class="my-submission-text">
 				@s.Description
 			</p>
 			@if (s.SuggestionStatus is not null)
@@ -87,7 +87,7 @@
 				<div class="fw-bold suggestion-detail-suggestion">
 					@s.SuggestionStatus.StatusName
 				</div>
-				<p class=":my-submission-text">
+				<p class="my-submission-text">
 					@((MarkupString)s.OwnerNotes)
 				</p>
 
@@ -101,22 +101,22 @@
 	<div class="form-layout mb-3">
 		<h2 class="my-submission-heading">Pending Suggestions</h2>
 		<p class="my-submission-text">These are your pending suggestions that have not been yet reviewed.</p>
-		@foreach (var s in approved)
+		@foreach (var s in pending)
 		{
 			<hr class="my-submission-separator" />
 			<div class="fw-bold suggestion-detail-suggestion">
 				@s.Suggestion
 			</div>
-			<p class=":my-submission-text">
+			<p class="my-submission-text">
 				@s.DateCreated.ToString("MM.dd.yyyy");
 			</p>
-			<p class=":my-submission-text">
+			<p class="my-submission-text">
 				Total Votes: @s.UserVotes.Count
 			</p>
-			<p class=":my-submission-text">
+			<p class="my-submission-text">
 				@s.Category.CategoryName
 			</p>
-			<p class=":my-submission-text">
+			<p class="my-submission-text">
 				@s.Description
 			</p>
 			@if (s.SuggestionStatus is not null)
@@ -124,7 +124,7 @@
 				<div class="fw-bold suggestion-detail-suggestion">
 					@s.SuggestionStatus.StatusName
 				</div>
-				<p class=":my-submission-text">
+				<p class="my-submission-text">
 					@((MarkupString)s.OwnerNotes)
 				</p>
 
@@ -137,22 +137,22 @@
 	<div class="form-layout mb-3">
 		<h2 class="my-submission-heading">Rejected Suggestions</h2>
 		<p class="my-submission-text">These are your suggestions that have been rejected.</p>
-		@foreach (var s in approved)
+		@foreach (var s in rejected)
 		{
 			<hr class="my-submission-separator" />
 			<div class="fw-bold suggestion-detail-suggestion">
 				@s.Suggestion
 			</div>
-			<p class=":my-submission-text">
+			<p class="my-submission-text">
 				@s.DateCreated.ToString("MM.dd.yyyy");
 			</p>
-			<p class=":my-submission-text">
+			<p class="my-submission-text">
 				Total Votes: @s.UserVotes.Count
 			</p>
-			<p class=":my-submission-text">
+			<p class="my-submission-text">
 				@s.Category.CategoryName
 			</p>
-			<p class=":my-submission-text">
+			<p class="my-submission-text">
 				@s.Description
 			</p>
 			@if (s.SuggestionStatus is not null)
@@ -160,7 +160,7 @@
 				<div class="fw-bold suggestion-detail-suggestion">
 					@s.SuggestionStatus.StatusName
 				</div>
-				<p class=":my-submission-text">
+				<p class="my-submission-text">
 					@((MarkupString)s.OwnerNotes)
 				</p>
 
