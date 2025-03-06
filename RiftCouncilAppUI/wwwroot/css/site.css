@@ -582,3 +582,26 @@ a:hover, .btn-link:hover {
     .submission-edit-icon:hover {
         color: #39BAD8;
     }
+
+.my-submission-heading {
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.my-submission-text {
+    margin-bottom: 0;
+    padding-left: 1rem;
+}
+
+my-submission-separator {
+    color : #A9A9A9;
+    height: 2px;
+    opacity: 1;
+}
+
+.btn-close {
+    color: #FFFFFF;
+    padding: 10px;
+    background-color: #FFFFFF;
+}
