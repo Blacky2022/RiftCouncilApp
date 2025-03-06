@@ -605,3 +605,30 @@ my-submission-separator {
     padding: 10px;
     background-color: #FFFFFF;
 }
+
+.suggestion-entry-bottom {
+    display: flex;
+}
+
+.btn-archive {
+    border: 0;
+    background-color: #FFFFFF;
+    padding: 0 10px;
+    flex: unset;
+}
+
+.btn-archive-confirm,
+.btn-archive-reject {
+    text-transform: uppercase;
+    color: darkgray;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    flex: 1;
+    align-items: center; /* Centers text vertically */
+    justify-content: center; /* Centers text horizontally */
+}
+
+.btn-archive-confirm {
+    color: #E9354C;
+}
