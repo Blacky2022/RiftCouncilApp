@@ -601,8 +601,8 @@ my-submission-separator {
 }
 
 .btn-close {
-    color: #FFFFFF;
-    padding: 10px;
+        color: #FFFFFF;
+        padding: 10px;
     background-color: #FFFFFF;
 }
 
@@ -625,10 +625,32 @@ my-submission-separator {
     font-weight: 700;
     font-size: 0.8rem;
     flex: 1;
-    align-items: center; /* Centers text vertically */
-    justify-content: center; /* Centers text horizontally */
+    align-items: center;
+    justify-content: center; 
 }
 
 .btn-archive-confirm {
     color: #E9354C;
+}
+
+.admin-details{
+    margin-top:20px;
+}
+.admin-set-statuses {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.btn-status-completed:hover{
+    color: #B5D43A;
+}
+.btn-status-watching:hover {
+    color: #E9354C;
+}
+.btn-status-upcoming:hover {
+    color: #835581;
+}
+.btn-status-dismissed:hover {
+    color: #F9C30B;
 }
