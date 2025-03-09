@@ -39,11 +39,11 @@
 					<span class="oi oi-pencil submission-edit-icon" @onclick="(() => EditTitle(s))"></span>
 				}
 			
-			<div>
-				@s.Category.CategoryName
+			<div class="fw-bold">
+				Category: @s.Category.CategoryName
 			</div>
-			<div>
-				@s.Author.DisplayName
+				<div class="fw-bold">
+				Author: @s.Author.DisplayName
 			</div>
 			<div>
 				@if (currentEditingDescription == s.Id)
@@ -53,7 +53,7 @@
 						<button class="btn"  type="submit">
 							<span class="oi oi-check submission-edit-approve"></span>
 						</button>
-						<button @onclick="(() =>currentEditingDescription = string.Empty)">
+						<button type="button" class="btn" @onclick="(() =>currentEditingDescription = string.Empty)">
 							<span class="oi oi-x submission-edit-reject"></span>
 						</button>
 					</EditForm>

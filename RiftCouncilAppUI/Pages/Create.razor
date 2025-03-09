@@ -8,7 +8,7 @@
 @inject ISuggestionData suggestionData
 @inject IUserData userData
 
-<h1 class="page-heading text-uppercase mb-4">Make A Suggestion</h1>
+<h1 class="page-heading text-uppercase mb-4">What we should improve?</h1>
 <div class="row justify-content-center create-form">
 	<div class="col-xl-8 col-lg-10 form-layout">
 		<div class="close-button-section">
@@ -20,13 +20,13 @@
 				<DataAnnotationsValidator />
 				<ValidationSummary />
 				<div class="input-section">
-					<label class="form-label fw-bold text-uppercase" for="suggestion-text">Suggestion</label>
+					<label class="form-label fw-bold text-uppercase" for="suggestion-text">Your Idea</label>
 					<div class="input-description">Tell us what do you think that we can improve in our game.</div>
 					<InputText class="form-control" id="suggestion-text" @bind-Value="suggestion.Suggestion"/>
 				</div>
 				<div class="input-section">
 					<label class="form-label fw-bold text-uppercase" for="category">Category</label>
-					<div class="input-description">Choose one category:</div>
+					<div class="input-description">Choose the most fittin category:</div>
 					<div class="col-lg-8">
 						<MyInputRadioGroup id="category" @bind-Value="suggestion.CategoryId">
 							@foreach(var c in categories)
@@ -41,11 +41,11 @@
 				</div>
 				<div class="input-section">
 					<label class="form-label fw-bold text-uppercase"  for="description">Description</label>
-					<div class="input-description">Describe your suggestion.</div>
+					<div class="input-description">Describe in details why is it important topic.</div>
 					<InputTextArea class="form-control"  id="description" @bind-Value="suggestion.Description" />
 				</div>
 				<div class="center-children">
-					<button class="btn btn-main btn-lg text-uppercase" type="submit">Suggest</button>
+					<button class="btn btn-main btn-lg text-uppercase" type="submit">submit</button>
 				</div>
 			</EditForm>
 		}

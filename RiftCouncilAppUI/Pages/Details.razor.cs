@@ -25,7 +25,7 @@ namespace RiftCouncilAppUI.Pages
         {
             switch (settingStatus)
             {
-                case "Completed":
+                case "completed":
                     if (string.IsNullOrWhiteSpace(urlText))
                     {
                         return;
