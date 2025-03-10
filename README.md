@@ -4,6 +4,9 @@ RiftCouncil is a **community-driven suggestion platform** designed for **League 
 
 The app integrates **Azure B2C for authentication** for user authentication and authorization.
 
+## 🖼️ Screenshot
+![RiftCouncil Screenshot](/RiftCouncilAppUI/wwwroot/images/rifcouncil.png)
+
 ## **Features**
 - **User Authentication** – Secure login with **Azure B2C**.
 - **Suggestion Submission** – Players can submit ideas for **champion balance, items, gameplay changes, or new features**.
